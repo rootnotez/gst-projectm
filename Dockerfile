@@ -43,7 +43,7 @@ RUN git clone --depth 1 https://github.com/projectM-visualizer/presets-cream-of-
 RUN git clone --depth 1 https://github.com/projectM-visualizer/presets-milkdrop-texture-pack.git /usr/local/share/projectM/textures
 
 # Clone the gst-projectm repository and build the GStreamer plugin
-RUN git clone https://github.com/projectM-visualizer/gst-projectm.git /tmp/gst-projectm
+RUN git clone --depth 1 https://github.com/projectM-visualizer/gst-projectm.git /tmp/gst-projectm
 WORKDIR /tmp/gst-projectm
 RUN ./setup.sh --auto
 RUN mkdir build && \
